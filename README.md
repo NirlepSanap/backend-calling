@@ -32,124 +32,113 @@ graph TD
     K[DevOps Infrastructure] --> L[Docker Containers]
     L --> M[Kubernetes Deployment]
     M --> N[Multi-Version APIs]
-📊 Database Schema
-🗂 Contacts Table
-Links contacts via linked_id foreign key
+```
 
-Supports primary/secondary relationships
+---
 
-Includes soft deletes and audit trails
+## 📊 Database Schema
 
-Optimized indexes for email/phone lookups
+### 🗂 Contacts Table
+- Links contacts via `linked_id` foreign key  
+- Supports **primary/secondary relationships**  
+- Includes **soft deletes** and **audit trails**  
+- Optimized indexes for **email/phone lookups**
 
-👤 Profiles Table
-User authentication and profile management
+### 👤 Profiles Table
+- User authentication and profile management  
+- Integrated with **Supabase Auth**  
+- Row Level Security (**RLS**) for data isolation
 
-Integrated with Supabase Auth
+---
 
-Row Level Security (RLS) for data isolation
+## 🔐 Authentication System
 
-🔐 Authentication System
-✅ Recently Implemented:
-Supabase Integration: Professional-grade authentication
+### ✅ Recently Implemented:
+- **Supabase Integration**: Professional-grade authentication  
+- **Multiple Sign-in Methods**: Email/password + Google OAuth  
+- **Protected Routes**: Authentication required for identity features  
+- **User Isolation**: Each user sees only their own contacts  
+- **Session Management**: Persistent sessions with auto-refresh  
 
-Multiple Sign-in Methods: Email/password + Google OAuth
+---
 
-Protected Routes: Authentication required for identity features
+## 🎨 Frontend Stack
 
-User Isolation: Each user sees only their own contacts
+**Technologies:**
+- ⚛️ React 18 with TypeScript  
+- ⚡ Vite for fast development  
+- 🎨 Tailwind CSS + Radix UI for professional styling  
+- 🔀 React Router for navigation  
+- 🔄 React Query for server state management  
+- ✅ React Hook Form with Zod validation  
 
-Session Management: Persistent sessions with auto-refresh
+---
 
-🎨 Frontend Stack
-Technologies:
+## 🔧 Backend Architecture
 
-⚛️ React 18 with TypeScript
+### 🛠 Node.js API Server
+- 🚀 Express.js framework with security middleware  
+- 🚦 Rate limiting and CORS protection  
+- 🔗 PostgreSQL connection pooling  
+- 🔄 Transaction-based operations for data consistency  
+- ❤️ Health monitoring endpoints  
 
-⚡ Vite for fast development
+### 🧠 Identity Algorithm
 
-🎨 Tailwind CSS + Radix UI for professional styling
-
-🔀 React Router for navigation
-
-🔄 React Query for server state management
-
-✅ React Hook Form with Zod validation
-
-🔧 Backend Architecture
-🛠 Node.js API Server
-🚀 Express.js framework with security middleware
-
-🚦 Rate limiting and CORS protection
-
-🔗 PostgreSQL connection pooling
-
-🔄 Transaction-based operations for data consistency
-
-❤️ Health monitoring endpoints
-
-🧠 Identity Algorithm
-text
-Copy
-Edit
+```text
 1. Find existing contacts with matching email/phone  
 2. Establish or identify primary contact  
 3. Handle multiple primaries (consolidation)  
 4. Create secondary contacts for new information  
 5. Return complete contact family tree  
-🐳 DevOps & Infrastructure
-🧰 Production-Ready Features:
-🐋 Docker Containerization: Multi-stage builds with security
+```
 
-☸️ Kubernetes Deployment: HPA, RBAC, ingress support
+---
 
-🔁 CI/CD Pipeline: GitHub Actions with testing and deployment
+## 🐳 DevOps & Infrastructure
 
-🧾 Multi-Version Support: API versioning (v1.0, v1.1, v2.0)
+### 🧰 Production-Ready Features:
+- 🐋 Docker Containerization: Multi-stage builds with security  
+- ☸️ Kubernetes Deployment: HPA, RBAC, ingress support  
+- 🔁 CI/CD Pipeline: GitHub Actions with testing and deployment  
+- 🧾 Multi-Version Support: API versioning (v1.0, v1.1, v2.0)  
+- 🔒 Security Scanning: Trivy vulnerability analysis  
+- 📈 Monitoring: Health checks and metrics collection  
 
-🔒 Security Scanning: Trivy vulnerability analysis
+---
 
-📈 Monitoring: Health checks and metrics collection
+## 🚀 Key Features Implemented
 
-🚀 Key Features Implemented
-✅ Identity Reconciliation: Core business logic
+- ✅ Identity Reconciliation: Core business logic  
+- ✅ Authentication: Supabase + Google OAuth  
+- ✅ User Management: Profiles and session handling  
+- ✅ Security: Rate limiting, CORS, input validation  
+- ✅ Database Optimization: Indexes, transactions, RLS  
+- ✅ UI/UX: Professional design with loading states  
+- ✅ DevOps: Docker, Kubernetes, CI/CD pipeline  
+- ✅ Testing: Unit tests and integration testing  
+- ✅ Documentation: Comprehensive README and system design  
 
-✅ Authentication: Supabase + Google OAuth
+---
 
-✅ User Management: Profiles and session handling
+## 📈 Performance & Scalability
 
-✅ Security: Rate limiting, CORS, input validation
+- ⚡ **Response Times**: < 100ms for identity reconciliation  
+- 📊 **Throughput**: 1000+ requests/second capability  
+- 📈 **Auto-scaling**: Kubernetes HPA based on CPU/memory  
+- 🧠 **Database**: Optimized queries with recursive CTEs  
+- 🔜 **Caching**: Redis integration planned  
 
-✅ Database Optimization: Indexes, transactions, RLS
+---
 
-✅ UI/UX: Professional design with loading states
+## 🔮 Future Enhancements
 
-✅ DevOps: Docker, Kubernetes, CI/CD pipeline
+- 🔍 GraphQL API: More flexible data fetching  
+- 🤖 Machine Learning: Enhanced identity matching algorithms  
+- 🔔 Real-time Updates: WebSocket integration  
+- 📊 Analytics Dashboard: Contact insights and metrics  
+- 🌍 Multi-region Deployment: Global scaling  
 
-✅ Testing: Unit tests and integration testing
+---
 
-✅ Documentation: Comprehensive README and system design
-
-📈 Performance & Scalability
-⚡ Response Times: < 100ms for identity reconciliation
-
-📊 Throughput: 1000+ requests/second capability
-
-📈 Auto-scaling: Kubernetes HPA based on CPU/memory
-
-🧠 Database: Optimized queries with recursive CTEs
-
-🔜 Caching: Redis integration planned
-
-🔮 Future Enhancements
-🔍 GraphQL API: More flexible data fetching
-
-🤖 Machine Learning: Enhanced identity matching algorithms
-
-🔔 Real-time Updates: WebSocket integration
-
-📊 Analytics Dashboard: Contact insights and metrics
-
-🌍 Multi-region Deployment: Global scaling
-
-🚀 This project showcases enterprise-level software engineering, combining modern web development, cloud-native architecture, and comprehensive DevOps practices. It's designed to handle real-world scale while maintaining security, performance, and maintainability standards.
+> 🚀 This project showcases **enterprise-level software engineering**, combining **modern web development**, **cloud-native architecture**, and **comprehensive DevOps practices**. It's designed to handle real-world scale while maintaining **security**, **performance**, and **maintainability** standards.
